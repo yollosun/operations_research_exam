@@ -28,7 +28,11 @@ const linkActive = computed(() => {
           <NuxtLink :active-class="linkActive" :class="link" to="/"><i class="pi pi-home"></i></NuxtLink>
           <NuxtLink :active-class="linkActive" :class="link" to="/queue/single_channel"><i class="pi pi-arrow-up"></i>
           </NuxtLink>
-          <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel"><i class="pi pi-arrows-alt"></i>
+          <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel_expectation"><i
+              class="pi pi-arrows-alt"></i>
+          </NuxtLink>
+          <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel_rejection"><i
+              class="pi pi-arrows-h"></i>
           </NuxtLink>
         </div>
       </div>

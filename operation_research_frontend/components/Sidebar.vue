@@ -17,11 +17,14 @@ const linkActive = computed(() => {
     <NuxtLink :active-class="linkActive" :class="link" to="/queue/single_channel"><i class="pi pi-arrow-up p-r-5"></i>
       Одноканальная СМО
     </NuxtLink>
-    <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel"> <i class="pi pi-arrows-alt p-r-5"></i>
-      Многоканальная СМО
+    <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel_expectation"> <i
+        class="pi pi-arrows-alt p-r-5"></i>
+      Многоканальная СМО c ожиданием
     </NuxtLink>
-    <!-- <NuxtLink :active-class="linkActive" :class="link" to="/employees"><i class="pi pi-user p-r-5"></i> Управление запасами
-    </NuxtLink> -->
+    <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel_rejection"> <i
+        class="pi pi-arrows-h p-r-5"></i>
+      Многоканальная СМО с отказами
+    </NuxtLink>
   </div>
 
 </template>
