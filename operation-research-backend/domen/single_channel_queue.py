@@ -16,28 +16,28 @@ class SingleChannelQueue:
         return 1-relative_throughput
 
     def get_single_queuing_theory_solution(self, lambda_value, t):
-        answer = {
-            "flow_rate": {
+        answer = [ 
+            {
                 "value": str(self.__flow_rate(t))[:5],
                 "description": "Интенсивность потока обслуживания"
-            },
-            "system_load_factor": {
+            }, 
+            {
                 "value": str(self.__system_load_factor(lambda_value, self.__flow_rate(t)))[:5],
                 "description": "Коэффициент загрузки системы"
-            },
-            "relative_throughput": {
+            }, 
+            {
                 "value": str(self.__relative_throughput(self.__flow_rate(t), lambda_value))[:5],
                 "description": "Относительная пропускная способность"
             },
-            "absolute_bandwidth": {
+            {
                 "value": str(self.__absolute_bandwidth(lambda_value, self.__relative_throughput(self.__flow_rate(t), lambda_value)))[:5],
                 "description": "Абсолютная пропускная способность"
             },
-            "failure_probability": {
+             {
                 "value": str(self.__failure_probability(self.__relative_throughput(self.__flow_rate(t), lambda_value)))[:5],
                 "description": "Вероятность отказа"
             }
-        }
+        ]
 
         return answer
     

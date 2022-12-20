@@ -17,28 +17,31 @@ class MultiChannelQueueWithRejection:
         absolute_bandwidth = intensity*relative_throughput
         average_busy_channels = absolute_bandwidth/average_time
 
-        answer = {
-            "downtime_probability": {
+        answer = [{
+                "name": "downtime_probability",
                 "value": str(downtime_probability)[:5],
                 "description": "Вероятность простоя системы"
             },
-            "failure_probability": {
+            {
+                "name": "failure_probability",
                 "value": str(failure_probability)[:5],
                 "description": "Вероятность отказа"
             },
-            "relative_throughput": {
+            {
+                "name": "relative_throughput",
                 "value": str(relative_throughput)[:5],
                 "description": "Относительная пропускная способность"
-            },
-            "absolute_bandwidth": {
+            },{
+                "name": "absolute_bandwidth",
                 "value": str(absolute_bandwidth)[:5],
                 "description": "Абсолютная пропускная способность"
             },
-            "average_busy_channels": {
+             {
+                "name": "average_busy_channels",
                 "value": str(average_busy_channels)[:5],
                 "description": "Среднее число занятых каналов"
             }
-            }
+        ]
         return answer
 
 
@@ -98,47 +101,46 @@ class MultiChannelQueueWithExpectation:
         queue_average_number_request = self.__queue_average_number_request(number_of_channels, intensity, queue_formation_probability)
         average_downtime = self.__average_downtime(queue_average_number_request, requests_flow_rate)
 
-        answer = {
-            "intensity": {
+        answer = [ {
                 "value": str(intensity)[:5],
                 "description": "Интенсивность нагрузки"
             },
-            "p_0": {
+            {
                 "value": str(p_0)[:5],
                 "description": "Вероятность, что канал свободен"
             },
-            "busy_probabilities_of_channels": {
+             {
                 "value": busy_probabilities_of_channels,
                 "description": "Вероятность занятости каналов"
             },
-            "rejection_probability": {
+             {
                 "value": str(0),
                 "description": "Вероятность отказа"
             },
-            "average_amount_of_busy_channels": {
+             {
                 "value": str(average_amount_of_busy_channels)[:5],
                 "description": "Среднее число занятых каналов"
             },
-            "busy_coefficient": {
+             {
                 "value": str(busy_coefficient)[:5],
                 "description": "Коэффициент занятости"
             },
-            "queue_formation_probability": {
+            {
                 "value": str(queue_formation_probability)[:5],
                 "description": "Вероятность очереди"
             },
-            "probability_of_no_queue": {
+             {
                 "value": str(probability_of_no_queue)[:5],
                 "description": "Вероятность отсутствия очереди"
             },
-            "queue_average_number_request": {
+            {
                 "value": str(queue_average_number_request)[:5],
                 "description": "Среднее число заявок в очереди"
             },
-            "average_downtime": {
+             {
                 "value": str(average_downtime)[:5],
                 "description": "Среднее время простоя"
             }
-            }
+        ]
 
         return answer
