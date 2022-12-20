@@ -3,7 +3,7 @@ from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.v1 import query_controller as v1_router
+from api.v1 import queue_controller as v1_router
 import uvicorn as uvicorn
 
 origins = [

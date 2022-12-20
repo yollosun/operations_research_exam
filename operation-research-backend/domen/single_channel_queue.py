@@ -1,4 +1,4 @@
-class SingleChannelQuery:
+class SingleChannelQueue:
 
     def __flow_rate(self, t):
         return 1/t
