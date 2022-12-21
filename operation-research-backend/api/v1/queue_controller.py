@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from domen.single_channel_queue import SingleChannelQueue
-from domen.multi_channel_queues import MultiChannelQueueWithRejection, MultiChannelQueueWithExpectation
+from domain.single_channel_queue import SingleChannelQueue
+from domain.multi_channel_queues import MultiChannelQueueWithRejection, MultiChannelQueueWithExpectation
 
 router = APIRouter(
     prefix="/api/v1", tags=["v1"], responses={404: {"description": "Not found"}}
