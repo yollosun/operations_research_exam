@@ -34,6 +34,8 @@ const linkActive = computed(() => {
           <NuxtLink :active-class="linkActive" :class="link" to="/queue/multi_channel_rejection"><i
               class="pi pi-arrows-h"></i>
           </NuxtLink>
+          <NuxtLink :active-class="linkActive" :class="link" to="/nlp/pegasus"><i class="pi pi-star-fill"></i>
+          </NuxtLink>
         </div>
       </div>
       <Sidebar :modal="false" v-model:visible="visibleLeft" class="p-sidebar-sm bg-[#060E28] ">

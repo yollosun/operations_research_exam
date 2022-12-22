@@ -25,6 +25,9 @@ const linkActive = computed(() => {
         class="pi pi-arrows-h p-r-5"></i>
       Многоканальная СМО с отказами
     </NuxtLink>
+    <NuxtLink :active-class="linkActive" :class="link" to="/nlp/pegasus"> <i class="pi pi-star-fill p-r-5"></i>
+      Парафрайзер
+    </NuxtLink>
   </div>
 
 </template>
